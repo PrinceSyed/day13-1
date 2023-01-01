@@ -21,31 +21,38 @@ submitButton.addEventListener("click", function() {
         console.log(nftList);
         let nftMasterList = [];
         // Create a table element
-        const tableElement = document.createElement("table");
+        const tableElement = document.createElement("div");
+        tableElement.classList.add('row');
+        
         for (let i = 0; i < nftList.length; i++) {
             console.log(response.data.ownedNfts[i].metadata.name);
             console.log(response.data.ownedNfts[i].metadata.image);
             nftMasterList[i] = response.data.ownedNfts[i].metadata.name;
 
             // Create a row element for each NFT
-            const rowElement = document.createElement("tr");
+            const colElement = document.createElement("div");
+            colElement.classList.add('col');
+
             // Create a cell element for the NFT name
-            const nameCellElement = document.createElement("td");
+            const nameCellElement = document.createElement("h3");
             // Set the innerHTML of the cell element to the name of the NFT
             nameCellElement.innerHTML = response.data.ownedNfts[i].metadata.name;
             // Create a cell element for the NFT image
-            const imageCellElement = document.createElement("td");
+            const imageCellElement = document.createElement("div");
+            imageCellElement.classList.add('butt');
+
             // Create an img element for the NFT image
             const imgElement = document.createElement("img");
+
             // Set the src attribute of the img element to the image URL
             imgElement.src = response.data.ownedNfts[i].metadata.image;
             // Append the img element to the cell element
             imageCellElement.appendChild(imgElement);
             // Append the cell elements to the row element
-            rowElement.appendChild(nameCellElement);
-            rowElement.appendChild(imageCellElement);
+            colElement.appendChild(nameCellElement);
+            colElement.appendChild(imageCellElement);
             // Append the row element to the table element
-            tableElement.appendChild(rowElement);
+            tableElement.appendChild(colElement);
         }
 
         // Append the table element to the nft-images-container element
