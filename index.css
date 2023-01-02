@@ -22,6 +22,10 @@ body {
     color: #fff;
 }
 
+.input-default:focus {
+    border: 1px solid #585858;
+}
+
 /* This is the deualt button styles */
 
 .button-default {
@@ -38,13 +42,15 @@ body {
     overflow: hidden;
 }
 
-.nft-row img {
-    max-width: 200px;
+ img {
+    max-width: 100%;
+    border-radius: 4px;
 }
 
 .nft-row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nft-row h3 {
@@ -54,24 +60,28 @@ body {
 }
 
 .nft-col {
-    width: 25%;
+    width: 23%;
+    margin: 7px 8px;
 }
 
 .image-container {
     margin: 10px 0px 0px 0px;
 }
 
-/*  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 200px; */
 
+/* Mobile Sytles */
   @media screen and (max-width: 600px) {
     .nft-row {
         display: flex;
         flex-direction: column;
+        align-content: center;
     }
-    .nft-col {
-        width: 100%;
-    }
+
   }
+
+
+
+  /*  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px; */
