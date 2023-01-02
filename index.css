@@ -80,7 +80,9 @@ body {
     .nft-col {
         width: 80%;
     }
-
+    .input-default {
+        min-width: 100px;
+    }
   }
 
 
