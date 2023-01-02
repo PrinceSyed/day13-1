@@ -22,7 +22,7 @@ submitButton.addEventListener("click", function() {
         let nftMasterList = [];
         // Create a table element
         const tableElement = document.createElement("div");
-        tableElement.classList.add('row');
+        tableElement.classList.add('nft-row');
         
         for (let i = 0; i < nftList.length; i++) {
             console.log(response.data.ownedNfts[i].metadata.name);
@@ -31,7 +31,7 @@ submitButton.addEventListener("click", function() {
 
             // Create a row element for each NFT
             const colElement = document.createElement("div");
-            colElement.classList.add('col');
+            colElement.classList.add('nft-col');
 
             // Create a cell element for the NFT name
             const nameCellElement = document.createElement("h3");

@@ -1,19 +1,34 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-        <!-- Adding Google Font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Rubik:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-    </head>
-    <body>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <!-- Adding Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Rubik:wght@500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2> NFT VIewoooooor </h2>
+    </div>
+
+
+    <div class="container">
+        <input class="input-default" placeholder="Enter ETH Address" type="text" id="user-address">
+        <button class="button-default" id="submit-button">Submit</button>
+    </div>
+
+
+    <div class="row nft-container max-width">
         
-            <input type="text" id="user-address">
-            <button id="submit-button">Submit</button>
+        <div id="nft-images-container" class="image-container"></div>
+    </div>
 
-            <div class="row nft-container">
-                Your NFTs:
-                <div id="nft-images-container"></div>
-            </div>
+    <script src="bundle.js"></script>
+</body>
 
-        <script src="bundle.js"></script>
-    </body>
 </html>
